@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   int num, rem, prod=1;
+   cout<<"Enter a Number: ";
+   cin>>num;
+   if(num>0)
+      cout<<endl;
+   else
+   {
+      cout<<"\nThe number must be greater than 0!\n";
+      return 0;
+   }
+   while(num>0)
+   {
+      rem = num%10;
+      num /= 10;
+      if(rem>0)
+      {
+         prod = prod*rem;
+         if(num>0)
+            cout<<rem<<"*";
+         else
+            cout<<rem;
+      }
+   }
+   cout<<" = "<<prod;
+   cout<<endl;
+   return 0;
+}
+   Output :-
+Enter a Number: 123456789
+
+9*8*7*6*5*4*3*2*1 = 362880
