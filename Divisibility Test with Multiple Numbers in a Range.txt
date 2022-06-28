@@ -1,0 +1,49 @@
+#include<iostream>
+
+using namespace std;
+int main()
+{
+   int tot, i, arr[100], num, j, arr_div[100];
+   cout<<"Enter the Size: ";
+   cin>>tot;
+   cout<<"Enter "<<tot<<" Numbers: ";
+   for(i=0; i<tot; i++)
+      cin>>arr[i];
+   cout<<"Enter a Number to Apply Divisibility Test: ";
+   cin>>num;
+   for(i=0, j=0; i<tot; i++)
+   {
+      if(arr[i]%num==0)
+      {
+         arr_div[j] = arr[i];
+         j++;
+      }
+   }
+   if(j==0)
+      cout<<"\nAll the numbers are not divisible by "<<num;
+   else
+   {
+      cout<<"\nThese are the numbers divisible by "<<num<<endl;
+      for(i=0; i<j; i++)
+         cout<<arr_div[i]<<" ";
+
+   }
+   cout<<endl;
+   return 0;
+}
+   Output :-
+Enter the Size: 10
+Enter 10 Numbers: 15
+25
+26
+90
+25
+40
+50
+99
+85
+110
+Enter a Number to Apply Divisibility Test: 2
+
+These are the numbers divisible by 2
+26  90  40  50  110 
