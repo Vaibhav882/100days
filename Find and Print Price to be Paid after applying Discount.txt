@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   float amount, discount, topaid;
+   cout<<"Enter Shopping Amount: ";
+   cin>>amount;
+   if(amount<=100)
+   {
+      cout<<"\nSorry! No discount for shopping under 100";
+      cout<<"You've to Pay "<<amount;
+   }
+   else
+   {
+      if(amount>100 && amount<=200)
+      {
+         cout<<"\nCongrats! You'll get 5% discount on total Shopping amount";
+         discount = (amount*5)/100;
+         topaid = amount-discount;
+      }
+      else if(amount>200 && amount<=400)
+      {
+         cout<<"\nCongrats! You'll get 10% discount on total Shopping amount";
+         discount = (amount*10)/100;
+         topaid = amount-discount;
+      }
+      else if(amount>400 && amount<=800)
+      {
+         cout<<"\nCongrats! You'll get 20% discount on total Shopping amount";
+         discount = (amount*20)/100;
+         topaid = amount-discount;
+      }
+      else
+      {
+         cout<<"\nCongrats! You'll get maximum (25%) discount on total Shopping amount";
+         discount = (amount*25)/100;
+         topaid = amount-discount;
+      }
+      cout<<"\nYou've to Pay Only "<<topaid;
+   }
+   cout<<endl;
+   return 0;
+}
+  Output :-
+Enter Shopping Amount : 17999
+
+Congrats! You'll get maximum  (25%)  discount on total shopping amount
+You've to Pay Only 13499.2
