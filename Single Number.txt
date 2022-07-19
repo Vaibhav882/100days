@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+     int res = 0;
+        for(int x: nums) {
+            res ^= x;
+        }
+        return res;   
+    }
+};
+   Output :- 
+Your input :- [2,2,1]
+Output :-       [1]
+Expected :-  [1]
