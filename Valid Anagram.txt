@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+      int m[256] = {0};
+        for(auto x : s){
+            m[x]++;
+        }
+        for(auto x : t){
+            m[x]--;
+        }
+        for(auto x : m){
+            if(x != 0) return false;
+        }
+        return true;   
+    }
+};
+     Output :- 
+Your input :-   "anagram"
+                       "nagaram"
+Output :-         true
+Expected :-    true
