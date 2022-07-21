@@ -1,0 +1,25 @@
+class Solution {
+public:
+    bool isValid(string s) {
+     vector<char> stack;
+        
+        for(char c : s) {
+            if(c == '{' || c == '[' || c == '(') stack.push_back(c);
+            else {
+                if(stack.size() == 0) return false;
+                char toComp = stack.back();
+                if(c == ')' && toComp != '(') return false;
+                if(c == '}' && toComp != '{') return false;
+                if(c == ']' && toComp != '[') return false;
+                stack.pop_back();
+            }
+        }
+        
+        if(stack.size() == 0) return true;
+        else return false;
+    }
+};  
+    Output:-
+Your input :-  "()"
+Output :-        true
+Expected :-   true
